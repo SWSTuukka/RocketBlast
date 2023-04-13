@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         //print(hor);
 
         // This is for moving the player
-        transform.Translate(new Vector3(hor * playerSpeed * Time.deltaTime, ver * playerSpeed * Time.deltaTime, 0));
+        transform.Translate(new Vector3(hor * playerSpeed * Time.deltaTime, 0, ver * playerSpeed * Time.deltaTime));
 
         // This is for shooting
         if (!dualanalog && Input.GetButton("Fire1") && canFire)

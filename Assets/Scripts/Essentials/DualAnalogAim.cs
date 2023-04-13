@@ -16,11 +16,11 @@ public class DualAnalogAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 gunDirection = Vector3.right * Input.GetAxis("HorizontalRStick") + Vector3.up * Input.GetAxis("VerticalRstick");
+        Vector3 gunDirection = Vector3.right * Input.GetAxis("HorizontalRStick") + Vector3.forward * Input.GetAxis("VerticalRstick");
         
         if(gunDirection.sqrMagnitude > 0.1f)
         {
-            transform.rotation = Quaternion.LookRotation(gunDirection, Vector3.back);
+            transform.rotation = Quaternion.LookRotation(gunDirection, Vector3.up);
 
             if(player.canFire)
             {
