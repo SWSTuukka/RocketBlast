@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour
 {
     public PauseScript pause;
     public Animator fadeScreen;
+    public Animator buttonHover;
+    public Animator quitHover;
     public float transitionTime = 1f;
 
     // Start is called before the first frame update
@@ -34,4 +36,23 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(levelNumber);
     }
 
+    public void HoverOn()
+    {
+        buttonHover.SetBool("Hover",true);
+    }
+
+    public void HoverOff()
+    {
+        buttonHover.SetBool("Hover", false);
+    }
+
+    public void QuitHoverOn()
+    {
+        quitHover.SetBool("QuitHover", true);
+    }
+
+    public void QuitHoverOff()
+    {
+        quitHover.SetBool("QuitHover", false);
+    }
 }

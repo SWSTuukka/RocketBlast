@@ -16,7 +16,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * enemySpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * enemySpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
