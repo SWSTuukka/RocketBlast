@@ -12,9 +12,9 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
 
-        Instantiate(enemy, transform.position, transform.rotation);
+        //Instantiate(enemy, transform.position, transform.rotation);
         //Use the line Invoke to get objects spawning randomly
-        //Invoke("Spawn", 3);
+        Invoke("Spawn", 3);
 
     }
 

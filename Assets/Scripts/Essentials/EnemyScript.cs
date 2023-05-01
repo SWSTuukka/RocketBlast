@@ -23,8 +23,9 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            print("PlayerDead");
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

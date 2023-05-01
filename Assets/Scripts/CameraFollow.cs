@@ -19,6 +19,6 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         //This is for tracking the player avatar on screen
-        transform.position = Vector3.Lerp(transform.position, target.position, camdelay * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, transform.position.y, target.position.z), camdelay * Time.deltaTime);
     }
 }
