@@ -23,17 +23,18 @@ public class LevelManager : MonoBehaviour
     {
         
     }
-    public void ChangeLevel(int levelNumber)
+    public void ChangeLevel()
     {
         pause.paused = false;
-        fadeScreen.SetTrigger("ChangeLevel");
-        StartCoroutine(NewLevel(levelNumber));
+        fadeScreen.SetTrigger("FadeOut");
+        StartCoroutine(LoadLevel());
+        SceneManager.LoadScene("MainGame");
     }
 
-    public IEnumerator NewLevel(int levelNumber)
+    public IEnumerator LoadLevel()
     {
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(levelNumber);
+        SceneManager.LoadScene("MainGame");
     }
 
     public void HoverOn()

@@ -15,25 +15,40 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemySpawner;
     public GameObject player;
 
+    public Animator fadeScreen;
+    public float transitionTime = 1f;
+
     public static GameManager gameManager;
 
     // Start is called before the first frame update
-    void Start()
+    public void StartGame()
     {
-        if(gameManager == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            gameManager = this;
-        }
+        fadeScreen.SetTrigger("FadeOut");
+        StartCoroutine(LoadLevel());
+        SceneManager.LoadScene("howto");
 
-        else if(gameManager != this)
-        {
-            Destroy(gameObject);
-        }
-
-        
     }
 
+    public IEnumerator LoadLevel()
+    {
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene("howto");
+
+    }
+
+    public void AddScore()
+    {
+        score += 1;
+        scoreText.text = score.ToString();
+
+        if (score > hiScore)
+        {
+            hiScore = score;
+            hiScoreText.text = "Hi Score: " + hiScore.ToString();
+            PlayerPrefs.SetInt("HiScore", hiScore);
+            PlayerPrefs.Save();
+        }
+    }
 
 
     public void QuitGame()
