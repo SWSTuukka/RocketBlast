@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyScript : MonoBehaviour
 {
-    [Range (1f, 10f)]
+    [Range (0f, 10f)]
     public float enemySpeed = 10f;
+    public GameObject explosion;
+    public GameObject retrybutton;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +29,12 @@ public class EnemyScript : MonoBehaviour
         {
             print("PlayerDead");
             Destroy(other.gameObject);
-            //Destroy(gameObject);
+            Destroy(gameObject);
+            //Instantiate(explosion, transform.position, transform.rotation);
+            retrybutton.SetActive(true);
+
         }
     }
 
+    
 }

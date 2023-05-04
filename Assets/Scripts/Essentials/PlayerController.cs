@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     [Header("Game Mode")]
     public bool dualanalog = false;
     public bool mouseaim = false;
+
+    private GameManager gm;
     
 
 
@@ -26,6 +28,21 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        gm = GameObject.Find("GM").GetComponent<GameManager>();
+
+        if(gm.dualanalog)
+        {
+            dualanalog = true;
+            mouseaim = false;
+        }
+
+        else if(gm.mouseaim)
+        {
+            dualanalog = false;
+            mouseaim = true;
+        }
+
         if(dualanalog)
         {
             gun.GetComponent<DualAnalogAim>().enabled = true;

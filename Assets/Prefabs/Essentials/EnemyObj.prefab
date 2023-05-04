@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 10
+  explosion: {fileID: 1510429218563571047, guid: 9faad0635459a29448a7db3fc2bc265d, type: 3}
+  retrybutton: {fileID: 2009953545106986376, guid: bf2a9f0262f2a3a4dbdd8c2f5c273fe7, type: 3}
 --- !u!1 &2231493006111352979
 GameObject:
   m_ObjectHideFlags: 0

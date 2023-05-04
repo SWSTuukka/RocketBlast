@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public float bulletSpeed = 90f;
+    public float bulletSpeed = 100f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 3f);
         
     }
 

@@ -6,6 +6,9 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Game Mode")]
+    public bool dualanalog = false;
+    public bool mouseaim = false;
 
     public int score;
     public static int hiScore = 3;
@@ -19,6 +22,21 @@ public class GameManager : MonoBehaviour
     public float transitionTime = 1f;
 
     public static GameManager gameManager;
+
+    void Start()
+    {
+        if (gameManager == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            gameManager = this;
+        }
+
+        else if (gameManager != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     // Start is called before the first frame update
     public void StartGame()
