@@ -9,18 +9,17 @@ public class EnemyScript : MonoBehaviour
     public float enemySpeed = 10f;
     public GameObject explosion;
     public GameObject retrybutton;
+    
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.forward * enemySpeed * Time.deltaTime);
+        
     }
 
     private void OnTriggerEnter(Collider other)
