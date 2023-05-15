@@ -241,7 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 10
-  explosion: {fileID: 0}
   retrybutton: {fileID: 0}
 --- !u!114 &2336528839510099271
 MonoBehaviour:
@@ -256,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  homingSpeed: 8
+  homingSpeed: 7
 --- !u!54 &4434318876065636798
 Rigidbody:
   m_ObjectHideFlags: 0

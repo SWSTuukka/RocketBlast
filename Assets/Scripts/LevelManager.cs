@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public Animator buttonHover;
     public Animator quitHover;
     public float transitionTime = 1f;
+    public Animator startHover;
 
     // Start is called before the first frame update
     void Start()
@@ -55,5 +56,15 @@ public class LevelManager : MonoBehaviour
     public void QuitHoverOff()
     {
         quitHover.SetBool("QuitHover", false);
+    }
+
+    public void startHoverOn()
+    {
+        buttonHover.SetBool("Hover", true);
+    }
+
+    public void startHoverOff()
+    {
+        buttonHover.SetBool("Hover", false);
     }
 }

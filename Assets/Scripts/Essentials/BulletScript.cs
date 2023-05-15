@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public float bulletSpeed = 100f;
+    public GameObject splatter;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            Instantiate(splatter, transform.position, transform.rotation);
         }
     }
 

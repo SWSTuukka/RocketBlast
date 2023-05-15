@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public Animator fadeScreen;
     public float transitionTime = 1f;
+    public Animator camerarotate;
 
     public static GameManager gameManager;
 
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         fadeScreen.SetTrigger("FadeOut");
+        camerarotate.SetTrigger("camerarotate");
         StartCoroutine(LoadLevel());
         SceneManager.LoadScene("howto");
 

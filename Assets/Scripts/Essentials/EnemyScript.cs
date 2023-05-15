@@ -7,7 +7,7 @@ public class EnemyScript : MonoBehaviour
 {
     [Range (0f, 10f)]
     public float enemySpeed = 10f;
-    public GameObject explosion;
+    
     public GameObject retrybutton;
     
 
@@ -26,11 +26,11 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            print("PlayerDead");
+            //print("PlayerDead");
             Destroy(other.gameObject);
             Destroy(gameObject);
-            //Instantiate(explosion, transform.position, transform.rotation);
-            retrybutton.SetActive(true);
+            
+            
 
         }
     }
