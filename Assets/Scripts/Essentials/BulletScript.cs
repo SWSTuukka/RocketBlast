@@ -6,10 +6,12 @@ public class BulletScript : MonoBehaviour
 {
     public float bulletSpeed = 100f;
     public GameObject splatter;
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("GM").GetComponent<GameManager>();
         Destroy(gameObject, 3f);
         
     }
@@ -26,9 +28,11 @@ public class BulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+                     
+            Instantiate(splatter, transform.position, Quaternion.Euler(90,Random.Range(0,360),0));
             Destroy(other.gameObject);
             Destroy(gameObject);
-            Instantiate(splatter, transform.position, transform.rotation);
+            gm.AddScore();
         }
     }
 

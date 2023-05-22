@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed = 10f;
     public float hor;
     public float ver;
+   
 
     [Header("Shooting")]
     public GameObject gun;
@@ -24,11 +25,11 @@ public class PlayerController : MonoBehaviour
     public float fireRate = 0.5f;
     public bool canFire = true;
 
-
+  
     // Start is called before the first frame update
     void Start()
     {
-
+    
         gm = GameObject.Find("GM").GetComponent<GameManager>();
 
         if(gm.dualanalog)
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
             gun.GetComponent<GunScript>().enabled = true;
         }
 
-
+        
     }
 
     // Update is called once per frame
@@ -63,8 +64,6 @@ public class PlayerController : MonoBehaviour
         // This is for calling controller Axis
         hor = Input.GetAxis("Horizontal");
         ver = Input.GetAxis("Vertical");
-
-        //print(hor);
 
         // This is for moving the player
         transform.Translate(new Vector3(hor * playerSpeed * Time.deltaTime, 0, ver * playerSpeed * Time.deltaTime));

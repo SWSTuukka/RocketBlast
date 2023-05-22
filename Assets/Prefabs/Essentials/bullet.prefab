@@ -233,6 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 100
   splatter: {fileID: 7539484056955070166, guid: f6a62fe5168c39948a8470fa741e877f, type: 3}
+  gm: {fileID: 1250483469895778266, guid: bc90c026eb9ff0b4aa21730547ac1b22, type: 3}
 --- !u!136 &4926670656326185594
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class EnemyWarning : MonoBehaviour
                 audioSource.Play();
             }
             cameraAnim1.SetTrigger("Shake");
+            StartCoroutine("RedImageFade");
         }
        
 
@@ -39,5 +40,12 @@ public class EnemyWarning : MonoBehaviour
         }
         
     }
+
+    public IEnumerator RedImageFade()
+    {
+        yield return new WaitForSeconds(0.5f);
+        redEdgeImage.enabled = false;
+    }
+
 
 }

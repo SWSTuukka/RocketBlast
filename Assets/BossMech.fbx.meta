@@ -3,7 +3,17 @@ guid: 36a437491141b8b40a6c1854187c9d87
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Claw_IN
+    second: {fileID: 2100000, guid: 2bfedb546878b724db4bb577a2547fe4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mechlight_M
+    second: {fileID: 2100000, guid: bddd6812e65a3be45a4f90ce10e24fb7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
