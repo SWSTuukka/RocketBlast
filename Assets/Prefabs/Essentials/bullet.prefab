@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 650783469041483733}
   m_Layer: 0
   m_Name: bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,6 +234,9 @@ MonoBehaviour:
   bulletSpeed: 100
   splatter: {fileID: 7539484056955070166, guid: f6a62fe5168c39948a8470fa741e877f, type: 3}
   gm: {fileID: 1250483469895778266, guid: bc90c026eb9ff0b4aa21730547ac1b22, type: 3}
+  splat: {fileID: 0}
+  pop: {fileID: 0}
+  damage: 1
 --- !u!136 &4926670656326185594
 CapsuleCollider:
   m_ObjectHideFlags: 0

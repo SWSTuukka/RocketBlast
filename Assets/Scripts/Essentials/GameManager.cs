@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public static int hiScore = 3;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiScoreText;
+    public Animator scoreAnimation;
+    public GameObject alien;
 
     public GameObject[] enemySpawner;
     public GameObject player;
@@ -60,6 +62,25 @@ public class GameManager : MonoBehaviour
     {
         score += 1;
         scoreText.text = score.ToString();
+        if(scoreAnimation == null)
+        {
+            scoreAnimation = GameObject.Find("Score").GetComponent<Animator>();
+            scoreAnimation.SetTrigger("score");
+        }
+        else
+        {
+            scoreAnimation.SetTrigger("score");
+        }
+
+        if(alien == null)
+        {
+            alien = GameObject.Find("points");
+            alien.GetComponent<AlphaFade>().fade = true;
+        }
+        else
+        {
+            alien.GetComponent<AlphaFade>().fade = true;
+        }
 
         if (score > hiScore)
         {
