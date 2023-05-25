@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BossBattle : MonoBehaviour
 {
     public float health = 1f;
  
     public GameObject sparks;
+
+    public TextMeshProUGUI healthText;
+    public float fadeDuration = 1.5f;
 
     private void Start()
     {
@@ -35,11 +39,20 @@ public class BossBattle : MonoBehaviour
 
     void TakeDamage(float amount)
     {
+        int damage = Mathf.CeilToInt(amount);
         health -= amount;
         if (health <= 0f)
         {
             Die();
         }
+
+        UpdateHealthText();
+    }
+
+    void UpdateHealthText()
+    {
+        healthText.text = Mathf.Max(health, 0).ToString();
+        healthText.CrossFadeAlpha(1f, 0f, true);
     }
 
     void Die()

@@ -6,6 +6,9 @@ public class TurretScript : MonoBehaviour
 {
     public Transform target;
     public GameObject bullet;
+    public float rotationSpeed = 5f;
+    public Transform gun;
+    public Vector3 bulletOffset = Vector3.zero;
 
 
     // Start is called before the first frame update
@@ -18,13 +21,17 @@ public class TurretScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target);
-       
+        Vector3 direction = target.position - transform.position;
+        direction.y = 0f;
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
     }
 
     public void Shoot()
     {
-        Instantiate(bullet, transform.position, transform.rotation);
+        Vector3 spawnPosition = gun.position + gun.TransformDirection(bulletOffset);
+        Instantiate(bullet, gun.position, gun.rotation);
         
     }
 }

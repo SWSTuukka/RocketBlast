@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public int requiredPoints = 10;
 
 
+
     void Start()
     {
         if (gameManager == null)
@@ -40,6 +41,23 @@ public class GameManager : MonoBehaviour
         else if (gameManager != this)
         {
             Destroy(gameObject);
+        }
+    }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scoreText == null)
+        {
+         scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+
+        }
+        if (sceneTransition == null)
+        {
+            sceneTransition = GameObject.Find("toboss").GetComponent<SceneTransition>();
+
         }
     }
 
