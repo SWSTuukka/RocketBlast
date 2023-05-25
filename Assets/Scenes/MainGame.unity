@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.026490927, g: 0.028540144, b: 0.037981045, a: 1}
+  m_IndirectSpecularColor: {r: 0.034577016, g: 0.03602615, b: 0.047854695, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5680,7 +5680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &449159752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5769,6 +5769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 462681135}
   - component: {fileID: 462681134}
+  - component: {fileID: 462681136}
   m_Layer: 0
   m_Name: splat
   m_TagString: Untagged
@@ -5887,6 +5888,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &462681136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462681133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d3f100479a8bf45952ce619449b34a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &590183443 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02fb76648a878c04fb164e1fa497acd1, type: 3}
@@ -6790,6 +6803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 949939647}
   - component: {fileID: 949939646}
+  - component: {fileID: 949939648}
   m_Layer: 0
   m_Name: pop
   m_TagString: Untagged
@@ -6908,6 +6922,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &949939648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949939645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d3f100479a8bf45952ce619449b34a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &957454852
 GameObject:
   m_ObjectHideFlags: 0
@@ -8584,6 +8610,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 0
   retrybutton: {fileID: 0}
+--- !u!1 &1386307363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1386307365}
+  - component: {fileID: 1386307364}
+  m_Layer: 0
+  m_Name: toboss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1386307364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386307363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74019f3cd81aa8429ce2e7c515630d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeScreen: {fileID: 449159753}
+  transitionTime: 1
+  bossLevel: BossLevel
+--- !u!4 &1386307365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386307363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 152.59656, y: 254.35974, z: -127.48224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1387885815
 GameObject:
   m_ObjectHideFlags: 0
@@ -9108,18 +9181,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.55
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1807098905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807098896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6d77a3a6d0dfff408e9bcf6cf2b6cfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1810639362
 GameObject:
   m_ObjectHideFlags: 0
@@ -9162,9 +9223,11 @@ MonoBehaviour:
   - {fileID: 5306222030761004035, guid: 4888ef049492107468047d189f4a08a9, type: 3}
   - {fileID: 5608993990595198580, guid: 5ee8247f34c028642af58023fab8865f, type: 3}
   player: {fileID: 1807098896}
-  fadeScreen: {fileID: 0}
-  transitionTime: 1
+  fadeScreen: {fileID: 449159753}
+  transitionTime: 3
   camerarotate: {fileID: 0}
+  sceneTransition: {fileID: 1386307364}
+  requiredPoints: 10
 --- !u!4 &1810639364
 Transform:
   m_ObjectHideFlags: 0
@@ -9409,7 +9472,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 28e83b4fbd7d5f44db8708e3ee9a03d4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.129
+  m_Volume: 0.13
   m_Pitch: 1
   Loop: 1
   Mute: 0

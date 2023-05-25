@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public Animator camerarotate;
 
     public static GameManager gameManager;
+    public SceneTransition sceneTransition;
+    public int requiredPoints = 10;
+
 
     void Start()
     {
@@ -82,12 +85,17 @@ public class GameManager : MonoBehaviour
             alien.GetComponent<AlphaFade>().fade = true;
         }
 
-        if (score > hiScore)
+        //if (score > hiScore)
         {
-            hiScore = score;
-            hiScoreText.text = "Hi Score: " + hiScore.ToString();
-            PlayerPrefs.SetInt("HiScore", hiScore);
-            PlayerPrefs.Save();
+           // hiScore = score;
+            //hiScoreText.text = "Hi Score: " + hiScore.ToString();
+            //PlayerPrefs.SetInt("HiScore", hiScore);
+            //PlayerPrefs.Save();
+        }
+
+        if (score >= requiredPoints)
+        {
+            sceneTransition.TransitionToNextScene();
         }
     }
 

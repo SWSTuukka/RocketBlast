@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04067895, g: 0.041703276, b: 0.055362, a: 1}
+  m_IndirectSpecularColor: {r: 0.030724255, g: 0.03267156, b: 0.04343105, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5680,7 +5680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &449159752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5786,7 +5786,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d262100a95f3dea4f95ec6b87ea95fe9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9251,18 +9251,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.55
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1807098905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807098896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6d77a3a6d0dfff408e9bcf6cf2b6cfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1810639362
 GameObject:
   m_ObjectHideFlags: 0
@@ -9297,15 +9285,19 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 1634274598}
   hiScoreText: {fileID: 0}
+  scoreAnimation: {fileID: 0}
+  alien: {fileID: 0}
   enemySpawner:
   - {fileID: 7153675409480354962, guid: a3799fbdcf52ada49a44330dd2367dac, type: 3}
   - {fileID: 980819364319385712, guid: cabb0f421b51fe34389778bf20e29170, type: 3}
   - {fileID: 5306222030761004035, guid: 4888ef049492107468047d189f4a08a9, type: 3}
   - {fileID: 5608993990595198580, guid: 5ee8247f34c028642af58023fab8865f, type: 3}
   player: {fileID: 1807098896}
-  fadeScreen: {fileID: 0}
+  fadeScreen: {fileID: 449159753}
   transitionTime: 1
   camerarotate: {fileID: 0}
+  sceneTransition: {fileID: 0}
+  requiredPoints: 0
 --- !u!4 &1810639364
 Transform:
   m_ObjectHideFlags: 0
