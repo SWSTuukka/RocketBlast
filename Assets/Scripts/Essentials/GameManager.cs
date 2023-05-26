@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager gameManager;
     public SceneTransition sceneTransition;
-    public int requiredPoints = 10;
+    public int requiredPoints = 100;
 
 
 

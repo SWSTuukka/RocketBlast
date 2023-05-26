@@ -5,7 +5,7 @@ using TMPro;
 
 public class BossBattle : MonoBehaviour
 {
-    public float health = 1f;
+    public float health = 500f;
  
     public GameObject sparks;
 

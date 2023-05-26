@@ -40,31 +40,31 @@ public class LevelManager : MonoBehaviour
 
     public void HoverOn()
     {
-        buttonHover.SetBool("Hover",true);
+        //buttonHover.SetBool("Hover",true);
     }
 
     public void HoverOff()
     {
-        buttonHover.SetBool("Hover", false);
+        //buttonHover.SetBool("Hover", false);
     }
 
     public void QuitHoverOn()
     {
-        quitHover.SetBool("QuitHover", true);
+        //quitHover.SetBool("QuitHover", true);
     }
 
     public void QuitHoverOff()
     {
-        quitHover.SetBool("QuitHover", false);
+        //quitHover.SetBool("QuitHover", false);
     }
 
     public void startHoverOn()
     {
-        buttonHover.SetBool("Hover", true);
+        //buttonHover.SetBool("Hover", true);
     }
 
     public void startHoverOff()
     {
-        buttonHover.SetBool("Hover", false);
+        //buttonHover.SetBool("Hover", false);
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02034419, g: 0.021813765, b: 0.029135844, a: 1}
+  m_IndirectSpecularColor: {r: 0.043201037, g: 0.04433799, b: 0.058902975, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8272,6 +8272,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174009892}
   m_CullTransparentMesh: 1
+--- !u!1 &1252152017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252152019}
+  - component: {fileID: 1252152018}
+  m_Layer: 0
+  m_Name: turretnull
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1252152018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252152017}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e755646e71c9c374985990f64de44769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  bullet: {fileID: 0}
+  rotationSpeed: 5
+  gun: {fileID: 0}
+  bulletOffset: {x: 0, y: 0, z: 0}
+--- !u!4 &1252152019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252152017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1545, y: 8.350159, z: 541.82947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1307757936
 GameObject:
   m_ObjectHideFlags: 0
@@ -9228,7 +9277,7 @@ MonoBehaviour:
   transitionTime: 3
   camerarotate: {fileID: 0}
   sceneTransition: {fileID: 1386307364}
-  requiredPoints: 10
+  requiredPoints: 100
 --- !u!4 &1810639364
 Transform:
   m_ObjectHideFlags: 0
