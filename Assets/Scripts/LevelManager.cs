@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
     public Animator quitHover;
     public float transitionTime = 1f;
     public Animator startHover;
+    public float levelScore;
+    public float scoretoBeat;
 
     // Start is called before the first frame update
     void Start()
@@ -29,42 +31,34 @@ public class LevelManager : MonoBehaviour
         pause.paused = false;
         fadeScreen.SetTrigger("FadeOut");
         StartCoroutine(LoadLevel());
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Menu");
     }
 
     public IEnumerator LoadLevel()
     {
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Menu");
     }
 
     public void HoverOn()
     {
-        //buttonHover.SetBool("Hover",true);
+        buttonHover.SetBool("Hover",true);
     }
 
     public void HoverOff()
     {
-        //buttonHover.SetBool("Hover", false);
+        buttonHover.SetBool("Hover", false);
     }
 
     public void QuitHoverOn()
     {
-        //quitHover.SetBool("QuitHover", true);
+        quitHover.SetBool("QuitHover", true);
     }
 
     public void QuitHoverOff()
     {
-        //quitHover.SetBool("QuitHover", false);
+        quitHover.SetBool("QuitHover", false);
     }
 
-    public void startHoverOn()
-    {
-        //buttonHover.SetBool("Hover", true);
-    }
-
-    public void startHoverOff()
-    {
-        //buttonHover.SetBool("Hover", false);
-    }
+    
 }

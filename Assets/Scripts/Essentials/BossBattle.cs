@@ -15,7 +15,7 @@ public class BossBattle : MonoBehaviour
     private void Start()
     {
         GameObject BossCollision = gameObject;
-        DontDestroyOnLoad(BossCollision);
+       
     }
 
     void OnTriggerEnter(Collider collision)
@@ -29,7 +29,7 @@ public class BossBattle : MonoBehaviour
                 TakeDamage(bulletDamage);
             }
             GameObject BossCollision = gameObject;
-            DontDestroyOnLoad(BossCollision);
+           
            
             Instantiate(sparks, collision.transform.position, Quaternion.Euler(0,180,0));
             Destroy(collision.gameObject);

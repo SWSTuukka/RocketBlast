@@ -26,7 +26,10 @@ public class GameManager : MonoBehaviour
 
     public static GameManager gameManager;
     public SceneTransition sceneTransition;
-    public int requiredPoints = 100;
+    
+
+
+    public LevelManager levelManager;
 
 
 
@@ -51,13 +54,22 @@ public class GameManager : MonoBehaviour
     {
         if(scoreText == null)
         {
-         scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+            scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
 
         }
         if (sceneTransition == null)
         {
             sceneTransition = GameObject.Find("toboss").GetComponent<SceneTransition>();
 
+        }
+        if(hiScoreText == null)
+        {
+            hiScoreText = GameObject.Find("Highscore").GetComponent<TextMeshProUGUI>();
+            hiScoreText.text = "Achieved Shots: " + hiScore.ToString();
+        }
+        if(levelManager == null)
+        {
+            levelManager = GameObject.Find("Main Camera").GetComponent<LevelManager>();
         }
     }
 
@@ -82,7 +94,8 @@ public class GameManager : MonoBehaviour
     public void AddScore()
     {
         score += 1;
-        scoreText.text = score.ToString();
+        levelManager.levelScore += 1;
+        scoreText.text = levelManager.levelScore.ToString();
         if(scoreAnimation == null)
         {
             scoreAnimation = GameObject.Find("Score").GetComponent<Animator>();
@@ -103,15 +116,15 @@ public class GameManager : MonoBehaviour
             alien.GetComponent<AlphaFade>().fade = true;
         }
 
-        //if (score > hiScore)
+        if (score > hiScore)
         {
-           // hiScore = score;
-            //hiScoreText.text = "Hi Score: " + hiScore.ToString();
-            //PlayerPrefs.SetInt("HiScore", hiScore);
-            //PlayerPrefs.Save();
+            hiScore = score;
+            hiScoreText.text = "Achieved Shots: " + hiScore.ToString();
+            PlayerPrefs.SetInt("Highscore", hiScore);
+            PlayerPrefs.Save();
         }
 
-        if (score >= requiredPoints)
+        if (levelManager.levelScore >= levelManager.scoretoBeat)
         {
             sceneTransition.TransitionToNextScene();
         }
