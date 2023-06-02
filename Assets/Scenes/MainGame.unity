@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.027662866, g: 0.029736029, b: 0.039556433, a: 1}
+  m_IndirectSpecularColor: {r: 0.02007368, g: 0.021529691, b: 0.028757751, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.512, z: 0}
+  m_LocalPosition: {x: 0, y: 0.017, z: 0}
   m_LocalScale: {x: 32.289692, y: 32.289692, z: 32.289692}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5581,6 +5581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4660118566480408449, guid: b018e1b6b868fa54081d467a56a8fa46, type: 3}
+  bomb: {fileID: 0}
   spawnTimer: 1
 --- !u!1001 &426736764
 PrefabInstance:
@@ -6124,6 +6125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4660118566480408449, guid: bca4ff7b43744714388343f1ca25cf88, type: 3}
+  bomb: {fileID: 0}
   spawnTimer: 3
 --- !u!1 &670703387 stripped
 GameObject:
@@ -6200,6 +6202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4660118566480408449, guid: a84c24922ce7bbc40b61fc9d6c1515e5, type: 3}
+  bomb: {fileID: 0}
   spawnTimer: 5
 --- !u!1 &819504938
 GameObject:
@@ -6496,6 +6499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4660118566480408449, guid: bca4ff7b43744714388343f1ca25cf88, type: 3}
+  bomb: {fileID: 0}
   spawnTimer: 3
 --- !u!1 &850851546
 GameObject:
@@ -6640,6 +6644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4660118566480408449, guid: b018e1b6b868fa54081d467a56a8fa46, type: 3}
+  bomb: {fileID: 0}
   spawnTimer: 1
 --- !u!1001 &872810034
 PrefabInstance:
@@ -7200,7 +7205,7 @@ MonoBehaviour:
   transitionTime: 1
   startHover: {fileID: 0}
   levelScore: 0
-  scoretoBeat: 10
+  scoretoBeat: 100
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8669,6 +8674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4660118566480408449, guid: b018e1b6b868fa54081d467a56a8fa46, type: 3}
+  bomb: {fileID: 0}
   spawnTimer: 1
 --- !u!1 &1379858783
 GameObject:
@@ -8890,6 +8896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4660118566480408449, guid: bca4ff7b43744714388343f1ca25cf88, type: 3}
+  bomb: {fileID: 0}
   spawnTimer: 3
 --- !u!1 &1432663868
 GameObject:
@@ -9804,6 +9811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4660118566480408449, guid: a84c24922ce7bbc40b61fc9d6c1515e5, type: 3}
+  bomb: {fileID: 0}
   spawnTimer: 5
 --- !u!1 &1945169342
 GameObject:

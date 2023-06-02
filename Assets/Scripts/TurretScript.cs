@@ -15,7 +15,7 @@ public class TurretScript : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        InvokeRepeating("Shoot", 5f, 2f);
+        InvokeRepeating("Shoot", 5f, 1f);
     }
 
     // Update is called once per frame

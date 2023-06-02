@@ -16,7 +16,7 @@ PlayerSettings:
   productName: 'Galaxial Crack Shot: Reloaded'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.03293843, g: 0, b: 0.23584908, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.09355642, g: 0.08472766, b: 0.1509434, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -40,9 +40,9 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 6d704fa46dd7d444ca90ce5936791eed, type: 3}
+  - logo: {fileID: 21300000, guid: fd2fcd0b02aaf5c4d8599a805be1d027, type: 3}
     duration: 2
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 6d704fa46dd7d444ca90ce5936791eed, type: 3}
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: fd2fcd0b02aaf5c4d8599a805be1d027, type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
@@ -136,7 +136,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 0
-  bundleVersion: 0.3
+  bundleVersion: 0.4
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -275,7 +275,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 12d15fe5fb48b3f45990ba2de34ef1b9, type: 3}
+      m_Icon: {fileID: 2800000, guid: bb64959252ec2f147b84e938a5bdc8c7, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
