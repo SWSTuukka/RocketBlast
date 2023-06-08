@@ -10,6 +10,7 @@ public class BulletScript : MonoBehaviour
     public AudioSource splat;
     public AudioSource pop;
     public float damage = 1f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class BulletScript : MonoBehaviour
         gm = GameObject.Find("GM").GetComponent<GameManager>();
         splat = GameObject.Find("splat").GetComponent<AudioSource>();
         pop = GameObject.Find("pop").GetComponent<AudioSource>();
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 1f);
         
     }
 
@@ -40,6 +41,16 @@ public class BulletScript : MonoBehaviour
             splat.Play();
             gm.AddScore();
         }
+        if (other.gameObject.CompareTag("bomb"))
+        {
+            bombhealth bomb = other.gameObject.GetComponent<bombhealth>();
+            if (bomb != null)
+            {
+                bomb.TakeDamage((int)damage);
+            }
+            
+            Destroy(gameObject);
+        }
     }
-
+    
 }

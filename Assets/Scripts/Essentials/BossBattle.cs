@@ -8,6 +8,7 @@ public class BossBattle : MonoBehaviour
     public float health = 500f;
  
     public GameObject sparks;
+    public GameObject explosion;
 
     public TextMeshProUGUI healthText;
     public float fadeDuration = 1.5f;
@@ -57,7 +58,7 @@ public class BossBattle : MonoBehaviour
 
     void Die()
     {
-        // Play death animation, disable boss object, etc.
+        Instantiate(explosion, transform.position, transform.rotation);
         gameObject.SetActive(false);
     }
 }

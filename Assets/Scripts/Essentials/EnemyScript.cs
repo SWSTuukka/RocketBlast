@@ -29,8 +29,7 @@ public class EnemyScript : MonoBehaviour
             //print("PlayerDead");
             Destroy(other.gameObject);
             Destroy(gameObject);
-            
-            
+  
 
         }
     }

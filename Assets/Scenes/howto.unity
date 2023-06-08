@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.028232519, g: 0.03030686, b: 0.040314108, a: 1}
+  m_IndirectSpecularColor: {r: 0.038987666, g: 0.04003915, b: 0.053149603, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -421,7 +421,7 @@ RectTransform:
   m_GameObject: {fileID: 266285251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0280953, y: 0.085406736, z: 0.00913698}
+  m_LocalScale: {x: 0.0280953, y: 0.27882737, z: 0.00913698}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1923250939}
@@ -1577,6 +1577,8 @@ MonoBehaviour:
   quitHover: {fileID: 0}
   transitionTime: 1
   startHover: {fileID: 0}
+  levelScore: 0
+  scoretoBeat: 0
 --- !u!114 &1444851129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,7 +1604,7 @@ MonoBehaviour:
   transitionTime: 1
   camerarotate: {fileID: 0}
   sceneTransition: {fileID: 0}
-  requiredPoints: 10
+  levelManager: {fileID: 0}
 --- !u!4 &1444851130
 Transform:
   m_ObjectHideFlags: 0
@@ -1671,7 +1673,7 @@ RectTransform:
   m_GameObject: {fileID: 1514422999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.050272595, y: 0.15282337, z: 0.016349344}
+  m_LocalScale: {x: 0.050272595, y: 0.5317184, z: 0.016349344}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 864863}

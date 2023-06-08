@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  homingSpeed: 13
+  homingSpeed: 16
 --- !u!54 &4434318876065636798
 Rigidbody:
   m_ObjectHideFlags: 0
