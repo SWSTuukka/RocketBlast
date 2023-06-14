@@ -55,9 +55,8 @@ public class bombhealth : MonoBehaviour
             }
             GameObject BombCollision = gameObject;
 
-
-
         }
+
     }
 }
 

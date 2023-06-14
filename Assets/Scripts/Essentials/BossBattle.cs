@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BossBattle : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class BossBattle : MonoBehaviour
 
     public TextMeshProUGUI healthText;
     public float fadeDuration = 1.5f;
+
+    private bool isBossDefeated = false;
+    public string nextLevelName = "Level2";
 
     private void Start()
     {
@@ -45,6 +49,20 @@ public class BossBattle : MonoBehaviour
         if (health <= 0f)
         {
             Die();
+            if (!isBossDefeated)
+            {
+                isBossDefeated = true;
+                LevelLoader levelLoader = FindObjectOfType<LevelLoader>();
+                if (levelLoader != null)
+                {
+                    levelLoader.StartNextLevelCoroutine();
+                }
+                else
+                {
+                    Debug.LogError("LevelLoader not found in the scene!");
+                }
+
+            }
         }
 
         UpdateHealthText();
@@ -60,6 +78,9 @@ public class BossBattle : MonoBehaviour
     {
         Instantiate(explosion, transform.position, transform.rotation);
         gameObject.SetActive(false);
+
     }
+
+  
 }
 

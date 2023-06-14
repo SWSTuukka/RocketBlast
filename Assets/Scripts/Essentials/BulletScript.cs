@@ -9,7 +9,7 @@ public class BulletScript : MonoBehaviour
     public GameManager gm;
     public AudioSource splat;
     public AudioSource pop;
-    public float damage = 1f;
+    public int damage = 1;
     
 
     // Start is called before the first frame update
@@ -39,7 +39,7 @@ public class BulletScript : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
             splat.Play();
-            gm.AddScore();
+            gm.AddScore(damage);
         }
         if (other.gameObject.CompareTag("bomb"))
         {

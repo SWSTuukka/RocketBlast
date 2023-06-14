@@ -14,7 +14,12 @@ public class destroy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            PlayerController playerController = other.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                playerController.TakeDamage(80);
+            }
+            Destroy(gameObject);
         }
     }
 }

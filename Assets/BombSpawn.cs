@@ -27,7 +27,7 @@ public class BombSpawn : MonoBehaviour
     void Spawn()
     {
         Instantiate(bomb, transform.position, transform.rotation);
-        spawnTimer = Random.Range(3, 7);
+        spawnTimer = Random.Range(10, 20);
         Invoke("Spawn", spawnTimer);
     }
 }

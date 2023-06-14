@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour
     public bool mouseaim = false;
 
     private GameManager gm;
-    
+
+    [Header("Player Stats")]
+    public int maxHealth = 100;
+    private int currentHealth;
+
 
 
     [Header("Player Movement")]
@@ -25,12 +29,19 @@ public class PlayerController : MonoBehaviour
     public float fireRate = 0.5f;
     public bool canFire = true;
 
-  
+    public PlayerHealthUI healthUI;
+    public GameObject explosion;
+    public GameObject gameOver;
+    public AudioSource damage;
+
+
     // Start is called before the first frame update
     void Start()
     {
-    
+
+        //gameOver.SetActive(false);
         gm = GameObject.Find("GM").GetComponent<GameManager>();
+        healthUI = GameObject.Find("playerhealthtext").GetComponent<PlayerHealthUI>();
 
         if(gm.dualanalog)
         {
@@ -55,7 +66,12 @@ public class PlayerController : MonoBehaviour
             gun.GetComponent<GunScript>().enabled = true;
         }
 
-        
+        currentHealth = maxHealth;
+    }
+
+    public int CurrentHealth
+    {
+        get { return currentHealth; }
     }
 
     // Update is called once per frame
@@ -84,10 +100,30 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(fireRate);
         canFire = true;
 
-
-
     }
 
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount;
+        healthUI.OnPlayerTakeDamage();
+        damage.Play();
 
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
 
+    private void Die()
+    {
+
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        gameOver.SetActive(true);
+    }
+
+        
 }
+
+
+

@@ -9,6 +9,9 @@ public class EnemyScript : MonoBehaviour
     public float enemySpeed = 10f;
     
     public GameObject retrybutton;
+
+    public int damageAmount = 10;
+
     
 
 
@@ -26,9 +29,13 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //print("PlayerDead");
-            Destroy(other.gameObject);
+            PlayerController playerController = other.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                playerController.TakeDamage(damageAmount);
+            }
             Destroy(gameObject);
+
   
 
         }

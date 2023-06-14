@@ -17,6 +17,9 @@ public class ToGame : MonoBehaviour
         SceneManager.LoadScene(MainGame);
     }
 
+    
+    
+
     public void MouseAimSelected()
     {
         gm.mouseaim = true;

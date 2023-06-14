@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void AddScore()
+    public void AddScore(int score)
     {
         score += 1;
         levelManager.levelScore += 1;
@@ -130,7 +130,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
 
 
     public void QuitGame()
@@ -139,10 +138,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("Quit!");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetHighScore()
     {
-        
+        hiScore = 0;
+        hiScoreText.text = "Achieved Shots: " + hiScore.ToString();
+        PlayerPrefs.SetInt("Highscore", hiScore);
+        PlayerPrefs.Save();
     }
 
     public void SpawnEnemyZone()
