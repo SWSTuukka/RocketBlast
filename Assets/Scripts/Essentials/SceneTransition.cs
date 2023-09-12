@@ -7,7 +7,7 @@ public class SceneTransition : MonoBehaviour
 {
     public Animator fadeScreen;
     public float transitionTime = 3f;
-    public string bossLevel; // Set the next scene name in the Inspector
+    public string bossLevel;
 
     public void TransitionToNextScene()
     {

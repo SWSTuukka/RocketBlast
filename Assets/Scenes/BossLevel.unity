@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.016509306, g: 0.017759163, b: 0.023693936, a: 1}
+  m_IndirectSpecularColor: {r: 0.024771959, g: 0.026666397, b: 0.035533205, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7984,7 +7984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redEdgeImage: {fileID: 1945169345}
-  audioSource: {fileID: 68083848}
   cameraAnim1: {fileID: 963194232}
 --- !u!135 &957454855
 SphereCollider:
@@ -8058,7 +8057,7 @@ Transform:
   m_GameObject: {fileID: 957454852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20.27725, y: 20.27725, z: 20.27725}
+  m_LocalScale: {x: 7.372808, y: 7.372808, z: 7.372808}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8192,13 +8191,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 0}
-  fadeScreen: {fileID: 0}
+  fadeScreen: {fileID: 449159753}
   buttonHover: {fileID: 0}
   quitHover: {fileID: 0}
   transitionTime: 1
   startHover: {fileID: 0}
   levelScore: 0
   scoretoBeat: 0
+  gm: {fileID: 1810639363}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9317,7 +9317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1108730571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9346,7 +9346,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108730570}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 08db902cefc1c9e47be17b6598c1262b, type: 2}
   m_CullingMode: 0
@@ -9365,7 +9365,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108730570}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -11264,8 +11264,8 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 1634274598}
   hiScoreText: {fileID: 0}
-  scoreAnimation: {fileID: 0}
-  alien: {fileID: 0}
+  scoreAnimation: {fileID: 1634274600}
+  alien: {fileID: 1108730570}
   enemySpawner:
   - {fileID: 7153675409480354962, guid: a3799fbdcf52ada49a44330dd2367dac, type: 3}
   - {fileID: 980819364319385712, guid: cabb0f421b51fe34389778bf20e29170, type: 3}
@@ -11276,7 +11276,7 @@ MonoBehaviour:
   transitionTime: 1
   camerarotate: {fileID: 0}
   sceneTransition: {fileID: 0}
-  levelManager: {fileID: 0}
+  levelManager: {fileID: 963194230}
 --- !u!4 &1810639364
 Transform:
   m_ObjectHideFlags: 0

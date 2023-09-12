@@ -15,14 +15,14 @@ public class missilescript : MonoBehaviour
 
     private void Update()
     {
-        // Update the shoot timer
+        
         shootTimer += Time.deltaTime;
 
-        // If enough time has passed, shoot a missile
+        //This tracks the interval the missiles are launched
         if (shootTimer >= shootInterval)
         {
             ShootMissile();
-            shootTimer = 0f; // Reset the timer
+            shootTimer = 0f; 
         }
     }
 
@@ -30,16 +30,16 @@ public class missilescript : MonoBehaviour
     {
         foreach (Transform housing in missileHousings)
         {
-            // Instantiate a missile prefab at the housing's position
+            //This instantiates a missile prefab from the missile housing
             GameObject missile = Instantiate(missilePrefab, housing.position, housing.rotation);
 
-            // Calculate the direction towards the player
+            //This finds the player's current location in and compares it to the housing location
             Vector3 direction = (playerTransform.position - housing.position).normalized;
 
-            // Get the missile's Rigidbody component
+            //This makes the missile rigid, so it can damage the player
             Rigidbody missileRigidbody = missile.GetComponent<Rigidbody>();
 
-            // Apply force to the missile to make it move towards the player
+            //This moves the missile towars the player
             missileRigidbody.velocity = direction * missileSpeed;
         }
     }

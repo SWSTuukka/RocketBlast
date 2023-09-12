@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class EnemyWarning : MonoBehaviour
 {
     public Image redEdgeImage;
-    public AudioSource audioSource;
     public Animator cameraAnim1;
 
 
@@ -18,13 +17,9 @@ public class EnemyWarning : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy")) //If conditions are met, the player receives a warning about an enemy
         {
             redEdgeImage.enabled = true;
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
             cameraAnim1.SetTrigger("Shake");
             StartCoroutine("RedImageFade");
         }
@@ -33,7 +28,7 @@ public class EnemyWarning : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy")) //Conditions met, this disables the warning
         {
             redEdgeImage.enabled = false;
             

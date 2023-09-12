@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.024388462, g: 0.026246216, b: 0.03497725, a: 1}
+  m_IndirectSpecularColor: {r: 0.024771959, g: 0.026666397, b: 0.035533205, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11434,7 +11434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redEdgeImage: {fileID: 1945169345}
-  audioSource: {fileID: 68083848}
   cameraAnim1: {fileID: 963194232}
 --- !u!135 &957454855
 SphereCollider:
@@ -11508,7 +11507,7 @@ Transform:
   m_GameObject: {fileID: 957454852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20.27725, y: 20.27725, z: 20.27725}
+  m_LocalScale: {x: 7.372808, y: 7.372808, z: 7.372808}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -11649,6 +11648,7 @@ MonoBehaviour:
   startHover: {fileID: 0}
   levelScore: 0
   scoretoBeat: 150
+  gm: {fileID: 0}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12374,7 +12374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 755}
+  m_AnchoredPosition: {x: 0, y: 1318}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016810994
@@ -17993,7 +17993,7 @@ MonoBehaviour:
   transitionTime: 3
   camerarotate: {fileID: 0}
   sceneTransition: {fileID: 1386307364}
-  levelManager: {fileID: 0}
+  levelManager: {fileID: 963194230}
 --- !u!4 &1810639364
 Transform:
   m_ObjectHideFlags: 0

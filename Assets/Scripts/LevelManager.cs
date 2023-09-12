@@ -7,18 +7,20 @@ public class LevelManager : MonoBehaviour
 {
     public PauseScript pause;
     public Animator fadeScreen;
-    public Animator buttonHover;
+    
     public Animator quitHover;
     public float transitionTime = 1f;
-    public Animator startHover;
-    public float levelScore;
+   
+    public int levelScore;
     public float scoretoBeat;
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
         pause = GetComponent<PauseScript>();
         fadeScreen = GameObject.Find("FadeScreen").GetComponent<Animator>();
+        gm = GameObject.Find("GM").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -40,14 +42,15 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void HoverOn()
+    public void QuitGame()
     {
-        buttonHover.SetBool("Hover",true);
+        Application.Quit();
+        Debug.Log("Quit!");
     }
 
-    public void HoverOff()
+    public void ResetHighScore()
     {
-        buttonHover.SetBool("Hover", false);
+        gm.ResetHighScore();
     }
 
     public void QuitHoverOn()

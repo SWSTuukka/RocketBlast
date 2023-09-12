@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.038987666, g: 0.04003915, b: 0.053149603, a: 1}
+  m_IndirectSpecularColor: {r: 0.040320717, g: 0.041337095, b: 0.054872893, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -749,7 +749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.93, y: 0.58020175}
+  m_AnchoredPosition: {x: 2.93, y: 1.05}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &722426140
@@ -772,17 +772,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use wasd keys to move and rmb to point and shoot
+  m_text: Use wasd keys to move and lmb to point and shoot
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e72c8f9a00c3274fab6f38809fc58c5, type: 2}
-  m_sharedMaterial: {fileID: -1116857363105849158, guid: 6e72c8f9a00c3274fab6f38809fc58c5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2637207bc457a594699f971c1719711d, type: 2}
+  m_sharedMaterial: {fileID: 5289876224245406817, guid: 2637207bc457a594699f971c1719711d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4293328936
+  m_fontColor: {r: 0.15863325, g: 0, b: 0.9056604, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -799,8 +799,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.1
-  m_fontSizeBase: 55.1
+  m_fontSize: 52.69
+  m_fontSizeBase: 52.69
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1961,7 +1961,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685563319}
   m_LocalRotation: {x: -0, y: -0, z: 0.23132682, w: 0.97287613}
-  m_LocalPosition: {x: 3.0882993, y: 0.18273962, z: 0}
+  m_LocalPosition: {x: 2.64, y: 0.18273962, z: 0}
   m_LocalScale: {x: 0.20150699, y: 0.20150699, z: 0.20150697}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2135,15 +2135,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Choose your configuration:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e72c8f9a00c3274fab6f38809fc58c5, type: 2}
-  m_sharedMaterial: {fileID: -1116857363105849158, guid: 6e72c8f9a00c3274fab6f38809fc58c5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2637207bc457a594699f971c1719711d, type: 2}
+  m_sharedMaterial: {fileID: 5289876224245406817, guid: 2637207bc457a594699f971c1719711d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4293328936
+  m_fontColor: {r: 0.15686275, g: 0, b: 0.90588236, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2387,15 +2387,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ready to kick some spacial butt?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e72c8f9a00c3274fab6f38809fc58c5, type: 2}
-  m_sharedMaterial: {fileID: -1116857363105849158, guid: 6e72c8f9a00c3274fab6f38809fc58c5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2637207bc457a594699f971c1719711d, type: 2}
+  m_sharedMaterial: {fileID: 5289876224245406817, guid: 2637207bc457a594699f971c1719711d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4293328936
+  m_fontColor: {r: 0.15686275, g: 0, b: 0.90588236, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2412,8 +2412,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 91.79
-  m_fontSizeBase: 91.79
+  m_fontSize: 83.1
+  m_fontSizeBase: 83.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2632,7 +2632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.2071533, y: 1.0627136}
+  m_AnchoredPosition: {x: 1.93, y: 2.69}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006682760
@@ -2657,15 +2657,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Use the analog sticks on your controller to move and shoot
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e72c8f9a00c3274fab6f38809fc58c5, type: 2}
-  m_sharedMaterial: {fileID: -1116857363105849158, guid: 6e72c8f9a00c3274fab6f38809fc58c5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2637207bc457a594699f971c1719711d, type: 2}
+  m_sharedMaterial: {fileID: 5289876224245406817, guid: 2637207bc457a594699f971c1719711d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4293328936
+  m_fontColor: {r: 0.15686275, g: 0, b: 0.90588236, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2682,8 +2682,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.1
-  m_fontSizeBase: 55.1
+  m_fontSize: 52.7
+  m_fontSizeBase: 52.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

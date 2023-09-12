@@ -116,9 +116,9 @@ public class GameManager : MonoBehaviour
             alien.GetComponent<AlphaFade>().fade = true;
         }
 
-        if (score > hiScore)
+        if (levelManager.levelScore > hiScore)
         {
-            hiScore = score;
+            hiScore = levelManager.levelScore;
             hiScoreText.text = "Achieved Shots: " + hiScore.ToString();
             PlayerPrefs.SetInt("Highscore", hiScore);
             PlayerPrefs.Save();
