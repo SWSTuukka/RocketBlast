@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.024771959, g: 0.026666397, b: 0.035533205, a: 1}
+  m_IndirectSpecularColor: {r: 0.029750135, g: 0.03176978, b: 0.04224806, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8192,10 +8192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 0}
   fadeScreen: {fileID: 449159753}
-  buttonHover: {fileID: 0}
   quitHover: {fileID: 0}
   transitionTime: 1
-  startHover: {fileID: 0}
   levelScore: 0
   scoretoBeat: 0
   gm: {fileID: 1810639363}
@@ -9920,7 +9918,7 @@ GameObject:
   - component: {fileID: 1379858788}
   m_Layer: 4
   m_Name: Sun
-  m_TagString: sun
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12706,7 +12704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804128e3f015f7c46952f7d2497d01a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
 --- !u!95 &919132148405326831
 Animator:
   serializedVersion: 5
@@ -12746,8 +12744,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missilePrefab: {fileID: 1092585593156293895, guid: 357d9c66f04b87449bccc07b5a2c369d, type: 3}
   playerTransform: {fileID: 143647831}
-  missileSpeed: 150.95
-  shootInterval: 6
+  missileSpeed: 170
+  shootInterval: 4
   missileHousings:
   - {fileID: 328657097}
   - {fileID: 408606718}
